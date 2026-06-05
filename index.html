@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Олеся Сайфуллина | AI Automation Specialist</title>
+  <meta name="description" content="Олеся Сайфуллина — AI Automation Specialist, EdTech Product Builder, Data Analyst. Основатель RepIQ.ru.">
+  <meta property="og:title" content="Олеся Сайфуллина | AI Automation Specialist">
+  <meta property="og:description" content="AI-автоматизация, EdTech-продукты, аналитика данных и проект RepIQ.ru.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/olesya-photo.png">
+  <style>
+    :root {
+      --primary: #1976D2;
+      --primary-dark: #0D47A1;
+      --accent: #42A5F5;
+      --soft: #E3F2FD;
+      --soft-2: #F1F8FE;
+      --text: #263238;
+      --muted: #607D8B;
+      --card: rgba(255, 255, 255, 0.88);
+      --border: #BBDCF8;
+      --shadow: 0 24px 60px rgba(25, 118, 210, .10);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 8% 0%, #d8efff 0, transparent 28%),
+        radial-gradient(circle at 92% 8%, #e9f6ff 0, transparent 24%),
+        linear-gradient(135deg, #ffffff 0%, #eef8ff 47%, #ffffff 100%);
+      line-height: 1.55;
+    }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .page { max-width: 1120px; margin: 0 auto; padding: 28px 20px 54px; }
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 32px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      padding: 12px 0;
+      backdrop-filter: blur(12px);
+    }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; color: var(--primary); letter-spacing: .02em; }
+    .brand-mark {
+      width: 38px; height: 38px; display: grid; place-items: center; border-radius: 12px;
+      background: linear-gradient(135deg, var(--primary), var(--accent)); color: #fff;
+      box-shadow: 0 10px 22px rgba(25,118,210,.18);
+    }
+    .nav-right { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; justify-content: flex-end; }
+    .nav-links { display: flex; gap: 16px; flex-wrap: wrap; font-size: 14px; }
+    .lang-switch {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.78);
+      box-shadow: 0 8px 20px rgba(25,118,210,.08);
+    }
+    .lang-btn {
+      border: 0;
+      background: transparent;
+      color: var(--primary-dark);
+      font-weight: 800;
+      border-radius: 999px;
+      padding: 7px 10px;
+      cursor: pointer;
+      font-size: 13px;
+    }
+    .lang-btn.active { background: var(--primary); color: #fff; }
+    .hero {
+      display: grid; grid-template-columns: 1.05fr .95fr; gap: 34px; align-items: center;
+      padding: 34px; border: 1px solid var(--border); border-radius: 28px;
+      background: var(--card); box-shadow: var(--shadow);
+      backdrop-filter: blur(8px);
+    }
+    .eyebrow { color: var(--primary); font-weight: 800; text-transform: uppercase; letter-spacing: .11em; font-size: 13px; margin-bottom: 12px; }
+    h1 { margin: 0 0 12px; font-size: clamp(34px, 6vw, 64px); line-height: .98; letter-spacing: .02em; }
+    .subtitle { color: var(--primary); font-size: clamp(18px, 2.2vw, 24px); font-weight: 700; margin: 0 0 18px; }
+    .lead { font-size: 18px; color: #37474F; max-width: 640px; margin: 0 0 22px; }
+    .buttons { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px; padding: 12px 18px; border-radius: 999px;
+      font-weight: 800; border: 1px solid var(--primary);
+    }
+    .btn.primary { color: #fff; background: var(--primary); box-shadow: 0 10px 22px rgba(25, 118, 210, .20); }
+    .btn.secondary { color: var(--primary); background: #fff; }
+    .photo-wrap { position: relative; min-height: 420px; display: grid; place-items: center; }
+    .photo-card {
+      width: min(100%, 390px); border-radius: 28px; overflow: hidden; border: 1px solid var(--border);
+      background: var(--soft); box-shadow: 0 26px 50px rgba(38,50,56,.12); transform: rotate(1.1deg);
+    }
+    .photo-card img { display: block; width: 100%; height: auto; }
+    .stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 22px; }
+    .stat { background: var(--soft-2); border: 1px solid var(--border); border-radius: 18px; padding: 16px; }
+    .stat strong { display: block; color: var(--primary); font-size: 25px; line-height: 1; margin-bottom: 6px; }
+    section { margin-top: 34px; }
+    .section-title { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+    .section-title span { width: 38px; height: 38px; display: grid; place-items: center; border-radius: 12px; background: var(--primary); color: #fff; font-weight: 800; }
+    .section-title h2 { margin: 0; color: var(--primary); text-transform: uppercase; letter-spacing: .08em; font-size: 22px; }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 22px; padding: 22px; box-shadow: 0 16px 34px rgba(25, 118, 210, .08); }
+    .card h3 { margin: 0 0 8px; color: var(--primary); font-size: 20px; }
+    .card p { margin: 0; color: #37474F; }
+    .chips { display: flex; flex-wrap: wrap; gap: 10px; }
+    .chip { padding: 8px 12px; border: 1px solid var(--border); border-radius: 999px; background: #fff; color: var(--text); font-weight: 650; font-size: 14px; }
+    .timeline { display: grid; gap: 14px; }
+    .timeline-item { display: grid; grid-template-columns: 190px 1fr; gap: 20px; background: var(--card); border: 1px solid var(--border); border-radius: 20px; padding: 18px; }
+    .time { color: var(--primary); font-weight: 800; }
+    .timeline h3 { margin: 0 0 4px; color: var(--primary); }
+    .timeline p { margin: 0; }
+    .contact { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .contact .card { display: flex; flex-direction: column; gap: 7px; }
+    footer { margin-top: 38px; text-align: center; color: var(--muted); font-size: 14px; }
+    @media (max-width: 840px) {
+      .hero { grid-template-columns: 1fr; padding: 24px; }
+      .photo-wrap { min-height: auto; }
+      .grid { grid-template-columns: 1fr; }
+      .stats { grid-template-columns: 1fr; }
+      .timeline-item { grid-template-columns: 1fr; }
+      .contact { grid-template-columns: 1fr; }
+      .nav { align-items: flex-start; flex-direction: column; position: relative; }
+      .nav-right { justify-content: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="RepIQ Portfolio">
+        <div class="brand-mark">R</div><span data-i18n="brand">RepIQ Portfolio</span>
+      </a>
+      <div class="nav-right">
+        <div class="nav-links">
+          <a href="#projects" data-i18n="navProjects">Проекты</a>
+          <a href="#skills" data-i18n="navSkills">Навыки</a>
+          <a href="#experience" data-i18n="navExperience">Опыт</a>
+          <a href="#contact" data-i18n="navContact">Контакты</a>
+        </div>
+        <div class="lang-switch" aria-label="Language switcher">
+          <button class="lang-btn active" type="button" data-lang="ru">RU</button>
+          <button class="lang-btn" type="button" data-lang="en">EN</button>
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero" id="top">
+      <div>
+        <div class="eyebrow" data-i18n="eyebrow">AI-автоматизация • EdTech • Аналитика данных</div>
+        <h1 data-i18n="name">Олеся Сайфуллина</h1>
+        <p class="subtitle" data-i18n="subtitle">AI Automation Specialist | EdTech Product Builder | Data Analyst</p>
+        <p class="lead" data-i18n="lead">Создаю практичные цифровые и AI-решения для образования, аналитики и автоматизации процессов. Основатель проекта RepIQ.ru — AI-платформы для снижения рутинной нагрузки преподавателей и поддержки персонализированного обучения.</p>
+        <div class="buttons">
+          <a class="btn primary" href="assets/Olesya_Saifullina_CV_RU.pdf" download data-i18n="btnRu">Скачать резюме RU</a>
+          <a class="btn secondary" href="assets/Olesya_Saifullina_CV_EN.pdf" download data-i18n="btnEn">Download CV EN</a>
+          <a class="btn secondary" href="mailto:olesy.raif@mail.ru" data-i18n="btnContact">Связаться</a>
+        </div>
+        <div class="stats" aria-label="Key numbers">
+          <div class="stat"><strong>20+</strong><span data-i18n="stat1">лет в образовании и развитии проектов</span></div>
+          <div class="stat"><strong>93</strong><span data-i18n="stat2">максимальный результат ученика на ЕГЭ</span></div>
+          <div class="stat"><strong>160</strong><span data-i18n="stat3">человек в управляемой команде</span></div>
+        </div>
+      </div>
+      <div class="photo-wrap">
+        <div class="photo-card"><img src="assets/olesya-photo.png" alt="Olesya Saifullina portrait"></div>
+      </div>
+    </header>
+
+    <section id="projects">
+      <div class="section-title"><span>P</span><h2 data-i18n="projectsTitle">Цифровые продукты</h2></div>
+      <div class="grid">
+        <article class="card">
+          <h3>RepIQ.ru</h3>
+          <p data-i18n="projectRepiq">AI-платформа для автоматизации деятельности преподавателей: подготовка уроков, генерация тестов, учебных материалов и персонализированных образовательных сценариев.</p>
+        </article>
+        <article class="card">
+          <h3 data-i18n="projectAppTitle">Мобильное приложение для репетиторов</h3>
+          <p data-i18n="projectApp">Автор концепции и участник разработки: функциональные требования, пользовательские сценарии, тестирование и публикация в RuStore.</p>
+        </article>
+        <article class="card">
+          <h3 data-i18n="projectCryptoTitle">Аналитические инструменты</h3>
+          <p data-i18n="projectCrypto">Модели в Excel и Google Sheets, дашборды и инструменты поддержки принятия решений для анализа криптовалютного рынка.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="section-title"><span>S</span><h2 data-i18n="skillsTitle">Ключевые навыки</h2></div>
+      <div class="card">
+        <div class="chips" id="skillChips"></div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="section-title"><span>E</span><h2 data-i18n="experienceTitle">Опыт и фокус</h2></div>
+      <div class="timeline">
+        <div class="timeline-item"><div class="time" data-i18n="exp1Time">2025 — настоящее время</div><div><h3 data-i18n="exp1Title">Основатель RepIQ.ru</h3><p data-i18n="exp1Text">Разработка AI-платформы для преподавателей и исследование применения LLM в образовательной среде.</p></div></div>
+        <div class="timeline-item"><div class="time" data-i18n="exp2Time">2003 — настоящее время</div><div><h3 data-i18n="exp2Title">Частный репетитор</h3><p data-i18n="exp2Text">Математика, информатика и программирование. Подготовка к ЕГЭ и ОГЭ, результаты учеников до 93 баллов.</p></div></div>
+        <div class="timeline-item"><div class="time">2000 — 2013</div><div><h3 data-i18n="exp3Title">Учитель математики и информатики</h3><p data-i18n="exp3Text">Преподавание, подготовка к олимпиадам, разработка учебных материалов и внедрение цифровых инструментов.</p></div></div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="section-title"><span>C</span><h2 data-i18n="contactTitle">Контакты</h2></div>
+      <div class="contact">
+        <div class="card">
+          <strong data-i18n="emailLabel">Email</strong><a href="mailto:olesy.raif@mail.ru">olesy.raif@mail.ru</a>
+          <strong data-i18n="locationLabel">Локация</strong><span data-i18n="locationValue">Уфа, Россия</span>
+          <strong data-i18n="phoneLabel">Телефон</strong><span>+7 960 383-78-57</span>
+        </div>
+        <div class="card">
+          <strong>Web</strong><a href="https://RepIQ.ru">RepIQ.ru</a>
+          <strong>GitHub</strong><a href="https://github.com/olraif">github.com/olraif</a>
+          <strong>RuStore</strong><a href="https://www.rustore.ru/catalog/app/com.olesya.tutor" data-i18n="appLink">Мобильное приложение для репетиторов</a>
+        </div>
+      </div>
+    </section>
+
+    <footer data-i18n="footer">© 2026 Олеся Сайфуллина. Портфолио в области AI-автоматизации, EdTech и аналитики данных.</footer>
+  </div>
+
+  <script>
+    const content = {
+      ru: {
+        documentTitle: "Олеся Сайфуллина | AI Automation Specialist",
+        metaDescription: "Олеся Сайфуллина — AI Automation Specialist, EdTech Product Builder, Data Analyst. Основатель RepIQ.ru.",
+        brand: "RepIQ Portfolio",
+        navProjects: "Проекты",
+        navSkills: "Навыки",
+        navExperience: "Опыт",
+        navContact: "Контакты",
+        eyebrow: "AI-автоматизация • EdTech • Аналитика данных",
+        name: "Олеся Сайфуллина",
+        subtitle: "AI Automation Specialist | EdTech Product Builder | Data Analyst",
+        lead: "Создаю практичные цифровые и AI-решения для образования, аналитики и автоматизации процессов. Основатель проекта RepIQ.ru — AI-платформы для снижения рутинной нагрузки преподавателей и поддержки персонализированного обучения.",
+        btnRu: "Скачать резюме RU",
+        btnEn: "Download CV EN",
+        btnContact: "Связаться",
+        stat1: "лет в образовании и развитии проектов",
+        stat2: "максимальный результат ученика на ЕГЭ",
+        stat3: "человек в управляемой команде",
+        projectsTitle: "Цифровые продукты",
+        projectRepiq: "AI-платформа для автоматизации деятельности преподавателей: подготовка уроков, генерация тестов, учебных материалов и персонализированных образовательных сценариев.",
+        projectAppTitle: "Мобильное приложение для репетиторов",
+        projectApp: "Автор концепции и участник разработки: функциональные требования, пользовательские сценарии, тестирование и публикация в RuStore.",
+        projectCryptoTitle: "Аналитические инструменты",
+        projectCrypto: "Модели в Excel и Google Sheets, дашборды и инструменты поддержки принятия решений для анализа криптовалютного рынка.",
+        skillsTitle: "Ключевые навыки",
+        skills: ["ChatGPT и LLM", "Prompt Engineering", "AI-автоматизация процессов", "Аналитика данных", "Python", "Excel и Google Sheets", "Продуктовое мышление", "Управление проектами", "KPI и метрики", "Клиентский опыт"],
+        experienceTitle: "Опыт и фокус",
+        exp1Time: "2025 — настоящее время",
+        exp1Title: "Основатель RepIQ.ru",
+        exp1Text: "Разработка AI-платформы для преподавателей и исследование применения LLM в образовательной среде.",
+        exp2Time: "2003 — настоящее время",
+        exp2Title: "Частный репетитор",
+        exp2Text: "Математика, информатика и программирование. Подготовка к ЕГЭ и ОГЭ, результаты учеников до 93 баллов.",
+        exp3Title: "Учитель математики и информатики",
+        exp3Text: "Преподавание, подготовка к олимпиадам, разработка учебных материалов и внедрение цифровых инструментов.",
+        contactTitle: "Контакты",
+        emailLabel: "Email",
+        locationLabel: "Локация",
+        locationValue: "Уфа, Россия",
+        phoneLabel: "Телефон",
+        appLink: "Мобильное приложение для репетиторов",
+        footer: "© 2026 Олеся Сайфуллина. Портфолио в области AI-автоматизации, EdTech и аналитики данных."
+      },
+      en: {
+        documentTitle: "Olesya Saifullina | AI Automation Specialist",
+        metaDescription: "Olesya Saifullina — AI Automation Specialist, EdTech Product Builder, Data Analyst. Founder of RepIQ.ru.",
+        brand: "RepIQ Portfolio",
+        navProjects: "Projects",
+        navSkills: "Skills",
+        navExperience: "Experience",
+        navContact: "Contact",
+        eyebrow: "AI Automation • EdTech • Data Analytics",
+        name: "Olesya Saifullina",
+        subtitle: "AI Automation Specialist | EdTech Product Builder | Data Analyst",
+        lead: "I build practical digital and AI-driven solutions for education, analytics and process automation. Founder of RepIQ.ru, an AI platform designed to reduce teachers' routine workload and support personalized learning.",
+        btnRu: "Download CV RU",
+        btnEn: "Download CV EN",
+        btnContact: "Contact me",
+        stat1: "years in education and project development",
+        stat2: "maximum student EGE score",
+        stat3: "team members managed",
+        projectsTitle: "Digital Products",
+        projectRepiq: "AI platform for automating teachers' workflows: lesson preparation, test generation, learning materials and personalized education scenarios.",
+        projectAppTitle: "Mobile app for tutors",
+        projectApp: "Concept author and product participant: functional requirements, user scenarios, testing and publication in RuStore.",
+        projectCryptoTitle: "Analytics tools",
+        projectCrypto: "Excel and Google Sheets models, dashboards and decision-support tools for analyzing crypto market metrics.",
+        skillsTitle: "Key Skills",
+        skills: ["ChatGPT & LLM", "Prompt Engineering", "AI Process Automation", "Data Analytics", "Python", "Excel & Google Sheets", "Product Thinking", "Project Management", "KPIs & Metrics", "Customer Experience"],
+        experienceTitle: "Experience Highlights",
+        exp1Time: "2025 — Present",
+        exp1Title: "Founder, RepIQ.ru",
+        exp1Text: "Developing an AI platform for teachers and researching LLM applications in education.",
+        exp2Time: "2003 — Present",
+        exp2Title: "Private Tutor",
+        exp2Text: "Mathematics, informatics and programming. Preparation for EGE and OGE exams, with student results up to 93 points.",
+        exp3Title: "Mathematics and Computer Science Teacher",
+        exp3Text: "Teaching, olympiad preparation, educational materials and implementation of digital learning tools.",
+        contactTitle: "Contact",
+        emailLabel: "Email",
+        locationLabel: "Location",
+        locationValue: "Ufa, Russia",
+        phoneLabel: "Phone",
+        appLink: "Tutor mobile app",
+        footer: "© 2026 Olesya Saifullina. Portfolio in AI automation, EdTech and data analytics."
+      }
+    };
+
+    const buttons = document.querySelectorAll('.lang-btn');
+    const skillChips = document.getElementById('skillChips');
+
+    function setLanguage(lang) {
+      const selected = content[lang] || content.ru;
+      document.documentElement.lang = lang;
+      document.title = selected.documentTitle;
+      const meta = document.querySelector('meta[name="description"]');
+      if (meta) meta.setAttribute('content', selected.metaDescription);
+      document.querySelectorAll('[data-i18n]').forEach((node) => {
+        const key = node.getAttribute('data-i18n');
+        if (selected[key] !== undefined) node.textContent = selected[key];
+      });
+      skillChips.innerHTML = '';
+      selected.skills.forEach((skill) => {
+        const chip = document.createElement('span');
+        chip.className = 'chip';
+        chip.textContent = skill;
+        skillChips.appendChild(chip);
+      });
+      buttons.forEach((button) => button.classList.toggle('active', button.dataset.lang === lang));
+      localStorage.setItem('portfolioLang', lang);
+    }
+
+    buttons.forEach((button) => button.addEventListener('click', () => setLanguage(button.dataset.lang)));
+    const savedLanguage = localStorage.getItem('portfolioLang');
+    const browserLanguage = navigator.language && navigator.language.toLowerCase().startsWith('ru') ? 'ru' : 'ru';
+    setLanguage(savedLanguage || browserLanguage);
+  </script>
+</body>
+</html>
